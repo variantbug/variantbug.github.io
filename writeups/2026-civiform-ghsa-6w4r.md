@@ -1,5 +1,15 @@
 # Finding a bug variant in CiviForm: same missing check, different route
 
+<style>
+@media (prefers-color-scheme: dark) {
+  body { background:#0d1117; color:#e6edf3; }
+  a { color:#58a6ff; }
+  h1,h2,h3 { color:#f0f6fc; border-color:#30363d; }
+  hr { border-color:#30363d; }
+  blockquote { color:#8b949e; border-color:#30363d; }
+}
+</style>
+
 **Nguyen Thanh Tin** — Independent security researcher, running [VariantBug](https://variantbug.com)
 Advisory: [GHSA-6w4r-8x7p-2hm5](https://github.com/civiform/civiform/security/advisories/GHSA-6w4r-8x7p-2hm5) · CWE-639 · CVSS 4.3 (Medium) · Fixed in CiviForm 3.36.0
 
