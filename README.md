@@ -1,4 +1,14 @@
-New File at / · variantbug/variantbug.github.io# VariantBug
+# VariantBug
+
+<style>
+@media (prefers-color-scheme: dark) {
+  body { background:#0d1117; color:#e6edf3; }
+  a { color:#58a6ff; }
+  h1,h2,h3 { color:#f0f6fc; border-color:#30363d; }
+  hr { border-color:#30363d; }
+  blockquote { color:#8b949e; border-color:#30363d; }
+}
+</style>
 
 Independent security research — **variant analysis & patch-diffing**.
 
@@ -12,7 +22,8 @@ When a vendor fixes one bug, the same root cause often survives elsewhere in the
 
 ## Advisories & write-ups
 
-- [Finding a bug variant in CiviForm: same missing check, different route](./writeups/2026-civiform-ghsa-6w4r.md) — GHSA-6w4r-8x7p-2hm5 · CWE-639 · CVSS 4.3 · fixed in 3.36.0. Found by variant-hunting the patch of GHSA-qv7c-9hjr-9rv7.
+- **[Finding a bug variant in CiviForm](./writeups/2026-civiform-ghsa-6w4r.md)**
+  GHSA-6w4r-8x7p-2hm5 · CWE-639 · CVSS 4.3 · fixed in 3.36.0 — found by variant-hunting the patch of GHSA-qv7c-9hjr-9rv7.
 
 ## Contact
 
