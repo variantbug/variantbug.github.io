@@ -12,12 +12,11 @@ When a vendor fixes one bug, the same root cause often survives elsewhere in the
 
 ## Advisories & write-ups
 
-Starting fresh — first advisory lands after vendor embargo clears. Index will live in [`writeups/`](./writeups).
+- [Finding a bug variant in CiviForm: same missing check, different route](./writeups/2026-civiform-ghsa-6w4r.md) — GHSA-6w4r-8x7p-2hm5 · CWE-639 · CVSS 4.3 · fixed in 3.36.0. Found by variant-hunting the patch of GHSA-qv7c-9hjr-9rv7.
 
 ## Contact
 
 **Nguyen Thanh Tin** — Independent security researcher
 hello@variantbug.com · [variantbug.com](https://variantbug.com)
 
-*Disclosure timelines and embargo terms honored at all times.*# variantbug.github.io
-Independent security research - variant analysis and patch-diffing
+*Disclosure timelines and embargo terms honored at all times.*
