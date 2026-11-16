@@ -114,7 +114,7 @@ h1 .plus{color:var(--green);font-family:var(--mono);font-weight:700}
 
   <header class="filehdr">
     <span class="gut" style="color:var(--green)">diff --git</span> <b>a/vendor/fix</b> <b>b/variantbug</b>
-    <h1><span class="plus">+</span>VariantBug</h1>
+    <h1><span class="plus">+&nbsp;</span>VariantBug</h1>
     <p class="tagline">We find the bugs a patch left behind.</p>
     <p class="byline"><b>Nguyen Thanh Tin</b> &mdash; independent security researcher &middot; variant analysis &amp; patch-diffing</p>
   </header>
@@ -123,10 +123,10 @@ h1 .plus{color:var(--green);font-family:var(--mono);font-weight:700}
     <div class="scan"></div>
     <div class="label">patch &middot; the hunt</div>
     <div class="row ctx"><span class="ln">041</span><span class="gut"> </span><span class="body">GET /reports/:id</span></div>
-    <div class="row add"><span class="ln">042</span><span class="gut">+</span><span class="body">+ if (report.owner != user) return denied</span></div>
+    <div class="row add"><span class="ln">042</span><span class="gut">+</span><span class="body">if (report.owner != user) return denied</span></div>
     <div class="row ctx"><span class="ln">043</span><span class="gut"> </span><span class="body">&nbsp;</span></div>
     <div class="row ctx"><span class="ln">108</span><span class="gut"> </span><span class="body">GET /invoices/:id</span></div>
-    <div class="row del"><span class="ln">109</span><span class="gut">-</span><span class="body">-   return invoice        <span class="danger">&#8592; this one, nobody checks</span><span class="cursor">.</span></span></div>
+    <div class="row del"><span class="ln">109</span><span class="gut">-</span><span class="body">return invoice        <span class="danger">&#8592; this one, nobody checks</span><span class="cursor">.</span></span></div>
   </section>
   <p class="prose" style="margin-top:18px">When a vendor fixes one bug, the same root cause often survives elsewhere. We diff the patch, re-derive the flaw class, and hunt its siblings &mdash; in the same project, its forks, and downstream vendors.</p>
 
