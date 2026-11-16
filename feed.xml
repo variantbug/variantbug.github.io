@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>VariantBug</title>
+<link>https://variantbug.com</link>
+<description>Independent security research: variant analysis and patch-diffing. We find the bugs a patch left behind.</description>
+<item>
+<title>Finding a bug variant in CiviForm</title>
+<link>https://variantbug.com/writeups/2026-civiform-ghsa-6w4r</link>
+<description>GHSA-6w4r-8x7p-2hm5, variant of GHSA-qv7c-9hjr-9rv7: same missing ownership check, different route.</description>
+<pubDate>Mon, 16 Nov 2026 00:00:00 +0700</pubDate>
+</item>
+<!-- new writeups: copy the item block above, update title/link/description/pubDate -->
+</channel></rss>

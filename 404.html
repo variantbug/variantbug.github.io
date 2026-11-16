@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 | VariantBug</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233d9a63'/%3E%3Ctext x='16' y='22' font-size='16' font-family='monospace' text-anchor='middle' fill='white'%3E+%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#faf7f2;--card:#fff;--ink:#2b3138;--soft:#5b6570;--faint:#8a94a0;--green:#3d9a63;--green-soft:#e7f4ec;--red:#c0564a;--line:#e8e2d8;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--bg:#141619;--card:#1d2025;--ink:#e8e5df;--soft:#a9b0ba;--faint:#7d8590;--green:#4db374;--green-soft:#1e3028;--red:#e58e83;--line:#2a2e35}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:17px/1.7 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center}
+.wrap{max-width:620px;padding:40px 26px;text-align:center}
+.diff{font:15px/1.9 var(--mono);background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 26px;text-align:left;display:inline-block;box-shadow:0 2px 10px rgba(60,50,30,.05)}
+.add{color:var(--green)}.del{color:var(--red);font-weight:600}
+h1{font:700 30px Georgia,serif;margin:26px 0 8px}
+p{color:var(--soft)}
+a{color:var(--green);text-decoration:none}
+a:hover{text-decoration:underline}
+.back{display:inline-block;margin-top:22px;background:var(--green);color:#fff;font-weight:600;font-size:15px;padding:10px 22px;border-radius:999px}
+.back:hover{text-decoration:none;transform:translateY(-1px)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="diff">
+    <span class="add">diff --git a/this-page b/nowhere</span><br>
+    @@ hunting @@<br>
+    <span class="del">- GET {{PAGE}} &#8592; nobody deployed it</span>
+  </div>
+  <h1>404: a bug we did not plant</h1>
+  <p>This page does not exist. The bugs we find usually do.</p>
+  <a class="back" href="/">&larr; Back to variantbug.com</a>
+</div>
+</body>
+</html>
