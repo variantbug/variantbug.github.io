@@ -58,10 +58,10 @@
 
   <div class="diff" aria-hidden="true">
     <div class="bar">patch · the hunt</div>
-    <pre><span class="hunk">the fix</span>
-<span class="del">-  a page now checks that you own what you open.</span>
-<span class="hunk">the hunt</span>
-<span class="add">+  a second page with the same check missing — still unpatched.</span></pre>
+    <pre><span class="hunk">open_report(user, report)</span>
+<span class="add">+ if (report.owner != user) return denied</span>
+<span class="del">- return report</span>
+<span class="hunk"><span class="add">same check, still missing elsewhere →</span> the hunt</span></pre>
   </div>
 
   <p class="lede">When a vendor fixes one bug, the same root cause often survives elsewhere.
