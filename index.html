@@ -70,19 +70,10 @@
     mix-blend-mode:screen;z-index:9}
   .scanner::after{content:"";position:absolute;inset:12px;border-radius:50%;background:#3fb95033}
   @media (hover:none){.scanner{display:none}}
-  /* advisories ticker */
-  .ticker{overflow:hidden;border:1px solid var(--line);border-radius:8px;background:var(--panel);margin-top:14px}
-  .ticker .rail{display:flex;gap:0;white-space:nowrap;font:12px/2.4 var(--mono);color:var(--dim);
-    animation:tick 26s linear infinite;width:max-content}
-  .ticker:hover .rail{animation-play-state:paused}
-  .ticker .rail span{padding:0 2.2em}
-  .ticker b{color:var(--accent);font-weight:600}
-  @keyframes tick{to{transform:translateX(-50%)}}
   @media (prefers-reduced-motion:reduce){
     .diff pre .ln{width:auto;animation:none}
     .cursor{animation:none}
-    .diff::after,.scanner,.ticker .rail{animation:none}
-    .ticker .rail{width:auto}
+    .diff::after,.scanner{animation:none}
   }
 </style>
 </head>
@@ -118,12 +109,6 @@
       <h3><a href="./writeups/2026-civiform-ghsa-6w4r">Finding a bug variant in CiviForm</a></h3>
       <p class="meta">GHSA-6w4r-8x7p-2hm5 <span class="sep">·</span> CWE-639 <span class="sep">·</span> CVSS 4.3 <span class="sep">·</span> fixed in 3.36.0</p>
       <p class="why">Variant of GHSA-qv7c-9hjr-9rv7: same missing ownership check, different route.</p>
-    </div>
-    <div class="ticker" aria-hidden="true">
-      <div class="rail">
-        <span><b>GHSA-6w4r-8x7p-2hm5</b> CiviForm · fixed in v3.36.0</span><span>variant of GHSA-qv7c-9hjr-9rv7 · different route, same missing check</span><span>MSRC-acknowledged researcher</span><span>next hunt in progress — nothing unverified is listed here</span>
-        <span><b>GHSA-6w4r-8x7p-2hm5</b> CiviForm · fixed in v3.36.0</span><span>variant of GHSA-qv7c-9hjr-9rv7 · different route, same missing check</span><span>MSRC-acknowledged researcher</span><span>next hunt in progress — nothing unverified is listed here</span>
-      </div>
     </div>
   </section>
 
