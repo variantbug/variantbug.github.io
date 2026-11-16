@@ -22,20 +22,24 @@ The first public advisory on this site came from step 1 and 2: a vendor fixed a 
 
 ## Human in the loop
 
-Tools are part of this work: watching fix feeds, reading large diffs, enumerating sibling surfaces. The division of labor is fixed: tools do breadth, a person does the verdict.
+Tools do breadth. A person does the verdict.
 
-<div class="gates">
-  <div class="gate"><span class="g-tag">GATE 1</span><strong>Re-derived by hand.</strong> Every candidate is confirmed against the code by a person before it is written down. A tool's guess is a lead, not a finding.</div>
-  <div class="gate"><span class="g-tag">GATE 2</span><strong>Repro or it does not exist.</strong> Nothing ships without a working reproduction a triager can run. Machine does breadth; a human signs the report.</div>
-  <div class="gate"><span class="g-tag">GATE 3</span><strong>Nothing files itself.</strong> No report leaves this desk without a human reading every line.</div>
+<div class="loop">
+  <div class="row"><span class="who tool">tool</span> finds a candidate <span class="verdict lead">a lead</span></div>
+  <div class="row"><span class="who human">human</span> re-derives it against the code <span class="verdict ok">a finding</span></div>
+  <div class="row"><span class="who human">human</span> runs the repro, reads every line <span class="verdict ok">a signature</span></div>
 </div>
 
 <style>
-.gates{display:grid;gap:12px;margin:20px 0}
-.gate{background:var(--card,#fff);border:1px solid var(--line,#e8e2d8);border-radius:12px;padding:14px 16px;position:relative}
-.g-tag{display:inline-block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.14em;color:var(--green,#3d9a63);background:var(--green-soft,#e7f4ec);border-radius:6px;padding:2px 8px;margin-right:8px;transform:rotate(-2deg)}
-.gate strong{color:inherit}
-@media (prefers-color-scheme: dark){.gate{background:#1d2025;border-color:#2e3238}.g-tag{background:#233127}}
+.loop{display:grid;gap:8px;margin:18px 0}
+.row{background:var(--card,#fff);border:1px solid var(--line,#e8e2d8);border-radius:10px;padding:10px 14px;font-size:15px}
+.who{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:6px;margin-right:4px;display:inline-block;transform:rotate(-2deg)}
+.tool{background:var(--green-soft,#e7f4ec);color:var(--green,#3d9a63)}
+.human{background:#f6e9d8;color:#b0782a}
+.verdict{font-weight:700;margin-left:auto;float:right}
+.verdict.lead{color:#b0782a}
+.verdict.ok{color:var(--green,#3d9a63)}
+@media (prefers-color-scheme: dark){.row{background:#1d2025;border-color:#2e3238}.tool{background:#233127}.human{background:#33291a;color:#d9a552}.verdict.lead{color:#d9a552}}
 </style>
 
 ## What I do not do
