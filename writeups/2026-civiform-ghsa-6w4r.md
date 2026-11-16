@@ -3,7 +3,7 @@ layout: page
 title: "Finding a bug variant in CiviForm: same missing check, different route"
 ---
 
-**Nguyen Thanh Tin** — Independent security researcher, running [VariantBug](https://variantbug.com)
+**Nguyen Thanh Tin**, Independent security researcher, running [VariantBug](https://variantbug.com)
 Advisory: [GHSA-6w4r-8x7p-2hm5](https://github.com/civiform/civiform/security/advisories/GHSA-6w4r-8x7p-2hm5) · CWE-639 · CVSS 4.3 (Medium) · Fixed in CiviForm 3.36.0
 
 Every public advisory is a map to the next bug. This one came from reading a patch.
@@ -18,21 +18,21 @@ One wasn't. `GET /applicants/:applicantId/programs/:programName` verified the re
 
 The original advisory did half the enumeration work for free:
 
-1. It named the bug class — act-on-behalf-of routes missing the applicant-ownership check.
-2. It listed which routes were already clean — the review and edit pages had the check.
+1. It named the bug class, act-on-behalf-of routes missing the applicant-ownership check.
+2. It listed which routes were already clean, the review and edit pages had the check.
 
-So the candidate set was small: every route carrying `:applicantId` in its path, minus the ones the advisory said were safe. `programs/:programName` was left over. Reading its controller confirmed the shape: a role gate, no ownership gate — the same "check at the wrong layer" pattern as the original bug.
+So the candidate set was small: every route carrying `:applicantId` in its path, minus the ones the advisory said were safe. `programs/:programName` was left over. Reading its controller confirmed the shape: a role gate, no ownership gate, the same "check at the wrong layer" pattern as the original bug.
 
 Applicant IDs are sequential, so enumeration was trivial: a TI for organization A could open the program page of any applicant served by organization B, and see their name, email, and program enrollments.
 
-## Impact — honestly rated
+## Impact, honestly rated
 
-This is a Medium, and the advisory says so plainly: identity and enrollment details across organizations, not application answers; requires a TI account; CVSS 4.3. Nothing in the answers, no privilege escalation. I reported it as such and the vendor rated it the same way — which is how the process should work.
+This is a Medium, and the advisory says so plainly: identity and enrollment details across organizations, not application answers; requires a TI account; CVSS 4.3. Nothing in the answers, no privilege escalation. I reported it as such and the vendor rated it the same way, which is how the process should work.
 
 ## Takeaways
 
 - **A patch for bug N is the spec for bug N+1.** Read the diff, extract the authorization pattern, and look for siblings that never got the fix.
-- **Advisories are high-quality free intelligence.** Vendors name the bug class and often list which surfaces are already clean — the enumeration is half-done before you start.
+- **Advisories are high-quality free intelligence.** Vendors name the bug class and often list which surfaces are already clean, the enumeration is half-done before you start.
 - **The tooling here was reading and ten minutes of manual testing.** No infrastructure required.
 
 ## Timeline

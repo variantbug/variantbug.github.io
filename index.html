@@ -15,6 +15,15 @@
   --serif:Georgia,"Times New Roman",serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#141619; --card:#1d2025; --ink:#e8e5df; --soft:#a9b0ba; --faint:#7d8590;
+    --green:#4db374; --green-soft:#1e3028; --amber-soft:#34291a; --amber:#d9a44c;
+    --red-soft:#3a2422; --red:#e58e83; --line:#2a2e35;
+  }
+  .pill{background:#262a30}
+  .focus .num{background:var(--green-soft)}
+}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font:17px/1.7 var(--sans)}
 a{color:var(--green);text-decoration:none}
@@ -101,7 +110,7 @@ footer a:hover{color:var(--green)}
 
   <section class="hero">
     <h1>We find the bugs <em>a patch left behind</em>.</h1>
-    <p class="lede">When a vendor fixes a security bug, the same weakness often survives somewhere else &mdash; another page, a fork, a downstream product. We read the fix carefully, then go look for its siblings.</p>
+    <p class="lede">When a vendor fixes a security bug, the same weakness often survives somewhere else, another page, a fork, a downstream product. We read the fix carefully, then go look for its siblings.</p>
     <a class="cta" href="#advisories">Read the first write-up &darr;</a>
     <p class="note">Every finding on this page ships with a working reproduction. Nothing unverified is claimed.</p>
   </section>
@@ -109,8 +118,7 @@ footer a:hover{color:var(--green)}
   <section class="story">
     <div class="card">
       <span class="tag fix">The patch</span>
-      <code><span class="ok">+ if (report.owner != user)</span>
-<span class="ok">+   return denied</span></code>
+      <code><span class="ok">+ if (report.owner != user)</span><br><span class="ok">+ &nbsp;&nbsp;return denied</span></code>
       <p>One page now checks who&rsquo;s asking.</p>
     </div>
     <div class="arrow">&rarr;</div>
@@ -118,7 +126,7 @@ footer a:hover{color:var(--green)}
       <span class="tag hunt">The hunt</span>
       <code>GET /invoices/:id
 <span class="miss">return invoice &#8592; nobody checks</span></code>
-      <p>A different page, the same missing check &mdash; still open.</p>
+      <p>A different page, the same missing check, still open.</p>
     </div>
   </section>
 
@@ -127,13 +135,13 @@ footer a:hover{color:var(--green)}
     <p class="sub">Three habits, one lane.</p>
     <div class="focus">
       <div class="card"><span class="num">01</span>
-        <div><h3>Patch-diff &rarr; variant</h3><p>Upstream fixes are a map to unpatched code paths &mdash; in the same project, its forks, and downstream vendors.</p></div>
+        <div><h3>Patch-diff &rarr; variant</h3><p>Upstream fixes are a map to unpatched code paths, in the same project, its forks, and downstream vendors.</p></div>
       </div>
       <div class="card"><span class="num">02</span>
         <div><h3>Chain assembly</h3><p>One finding is priced by what it reaches. We test whether it lowers the barrier for another before reporting either.</p></div>
       </div>
       <div class="card"><span class="num">03</span>
-        <div><h3>Verified only</h3><p>Every report ships with a reproduction. No repro, no report &mdash; triagers&rsquo; time is not a toy.</p></div>
+        <div><h3>Verified only</h3><p>Every report ships with a reproduction. No repro, no report, triagers&rsquo; time is not a toy.</p></div>
       </div>
     </div>
   </section>
@@ -154,7 +162,7 @@ footer a:hover{color:var(--green)}
   </section>
 
   <footer>
-    <span><b>Nguyen Thanh Tin</b> &mdash; independent security researcher</span>
+    <span><b>Nguyen Thanh Tin</b>, independent security researcher</span>
     <span class="sp"></span>
     <a href="https://github.com/variantbug">GitHub</a>
     <a href="mailto:hello@variantbug.com">Email</a>
