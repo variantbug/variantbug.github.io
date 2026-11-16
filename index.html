@@ -58,12 +58,11 @@
 
   <div class="diff" aria-hidden="true">
     <div class="bar">patch · the hunt</div>
-    <pre><span class="hunk">── what the vendor fixed ──────────────────────</span>
-<span class="del">-  one report page forgot to check: does this
-+  applicant really belong to you?</span>
-<span class="hunk">── what the hunt found ────────────────────────</span>
-<span class="add">+  a second page with the same missing check
-+  — still unpatched</span></pre>
+    <pre><span class="hunk">// the vendor's fix — one page now checks ownership:</span>
+<span class="del">- show(report)                       // anyone logged in could read</span>
+<span class="add">+ if (report.owner != user) block()  // only its owner can read</span>
+<span class="hunk">// the hunt — another page, same missing check:</span>
+<span class="del">- show(invoice)                      // <span class="add">still unpatched</span></span></pre>
   </div>
 
   <p class="lede">When a vendor fixes one bug, the same root cause often survives elsewhere.
