@@ -14,24 +14,20 @@ Independent security research by Nguyen Thanh Tin — variant analysis & patch-d
 }
 </style>
 
-Independent security research — **variant analysis & patch-diffing**.
-
-When a vendor fixes one bug, the same root cause often survives elsewhere in the codebase. We diff the patch, re-derive the flaw class, and hunt its siblings.
+When a vendor fixes one bug, the same root cause often survives elsewhere. We diff the patch, re-derive the flaw class, and hunt its siblings.
 
 ## Research focus
 
-- **Patch-diff → variant** — upstream fixes as a map to unpatched code paths in the same project, forks, and downstream vendors.
-- **Chain assembly** — single findings are priced by what they reach; we test whether one finding lowers the barrier for another before reporting either.
-- **Verified only** — every report ships with a reproduction. If it cannot be reproduced and observed, it is not reported.
+- **Patch-diff → variant** — upstream fixes as a map to unpatched paths in the same project, forks, and downstream vendors.
+- **Chain assembly** — one finding is priced by what it reaches; we test whether it lowers the barrier for another before reporting either.
+- **Verified only** — every report ships with a reproduction. No repro, no report.
 
 ## Advisories & write-ups
 
 - **[Finding a bug variant in CiviForm](./writeups/2026-civiform-ghsa-6w4r.md)**
-  GHSA-6w4r-8x7p-2hm5 · CWE-639 · CVSS 4.3 · fixed in 3.36.0 — found by variant-hunting the patch of GHSA-qv7c-9hjr-9rv7.
+  GHSA-6w4r-8x7p-2hm5 · CWE-639 · CVSS 4.3 · fixed in 3.36.0 — variant of GHSA-qv7c-9hjr-9rv7.
 
 ## Contact
 
-**Nguyen Thanh Tin** — Independent security researcher
-hello@variantbug.com · [variantbug.com](https://variantbug.com)
-
-*Disclosure timelines and embargo terms honored at all times.*
+hello@variantbug.com — **Nguyen Thanh Tin**, independent security researcher.
+Disclosure timelines and embargo terms honored at all times.
