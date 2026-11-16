@@ -88,7 +88,7 @@
 </head>
 <body>
 <div class="scanner" aria-hidden="true"></div>
-<script>document.addEventListener('mousemove',function(e){var s=document.querySelector('.scanner');if(s){s.style.left=e.clientX+'px';s.style.top=e.clientY+'px'}},{passive:true})</script>
+<script>if(!('ontouchstart' in window))document.addEventListener('mousemove',function(e){var s=document.querySelector('.scanner');if(s){s.style.left=e.clientX+'px';s.style.top=e.clientY+'px'}},{passive:true});else{var x=document.querySelector('.scanner');if(x)x.remove()}</script>
 <div class="wrap">
 
   <h1>VariantBug</h1>
@@ -115,7 +115,7 @@
   <section>
     <h2>Advisories &amp; write-ups</h2>
     <div class="item">
-      <h3><a href="./writeups/2026-civiform-ghsa-6w4r.md">Finding a bug variant in CiviForm</a></h3>
+      <h3><a href="./writeups/2026-civiform-ghsa-6w4r">Finding a bug variant in CiviForm</a></h3>
       <p class="meta">GHSA-6w4r-8x7p-2hm5 <span class="sep">·</span> CWE-639 <span class="sep">·</span> CVSS 4.3 <span class="sep">·</span> fixed in 3.36.0</p>
       <p class="why">Variant of GHSA-qv7c-9hjr-9rv7: same missing ownership check, different route.</p>
     </div>
