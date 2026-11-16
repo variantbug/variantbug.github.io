@@ -25,7 +25,7 @@
   .diff{margin:28px 0 8px;border:1px solid var(--line);border-radius:8px;background:var(--panel);font:12.5px/1.7 var(--mono);overflow:hidden}
   .diff .bar{padding:6px 14px;border-bottom:1px solid var(--line);color:var(--dim);font-size:11px;letter-spacing:.08em}
   .diff pre{padding:12px 14px;white-space:pre;overflow-x:auto}
-  .add{color:#7ee787}.del{color:#ffa198}.hunk{color:#8b949e}
+  .add{color:#7ee787}.del{color:#ffa198}.hunk{color:#8b949e}.danger{color:#ffa198;font-weight:600}
   .lede{margin-top:24px;color:var(--text)}
   .lede .p{color:var(--dim)}
   section{margin-top:48px}
@@ -58,10 +58,11 @@
 
   <div class="diff" aria-hidden="true">
     <div class="bar">patch · the hunt</div>
-    <pre><span class="hunk">open_report(user, report)</span>
+    <pre>GET /reports/:id
 <span class="add">+ if (report.owner != user) return denied</span>
-<span class="del">- return report</span>
-<span class="hunk"><span class="add">same check, still missing elsewhere →</span> the hunt</span></pre>
+
+GET /invoices/:id
+  return invoice        ← <span class="danger">this one, nobody checks</span></pre>
   </div>
 
   <p class="lede">When a vendor fixes one bug, the same root cause often survives elsewhere.
