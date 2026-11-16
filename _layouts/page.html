@@ -31,16 +31,38 @@
   .content pre code{background:none;border:0;padding:0;font:12.5px/1.7 var(--mono)}
   .content blockquote{border-left:3px solid var(--line);padding:2px 0 2px 16px;color:var(--muted);margin:16px 0}
   .content hr{border:0;border-top:1px solid var(--line);margin:32px 0}
-  footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);font:13px var(--mono)}
+  footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);font:13px var(--mono);display:flex;gap:8px 20px;flex-wrap:wrap;align-items:center}
+  footer .sp{flex:1}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent)}
+  .top{display:flex;align-items:center;gap:11px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:34px}
+  .dot{width:30px;height:30px;border-radius:9px;background:var(--accent);color:#fff;font:700 17px/30px var(--mono);text-align:center;flex:none}
+  .brand{font:700 17px -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--text)}
+  .brand small{display:block;font:400 11.5px -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--dim);margin-top:1px}
+  .top .sp{flex:1}
+  .top a.nav{font-size:13.5px;color:var(--muted);text-decoration:none}
+  .top a.nav:hover{color:var(--accent)}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"TechArticle","headline":{{ page.title | jsonify }},"url":"https://variantbug.com{{ page.url }}","image":"https://variantbug.com/assets/og.jpg","author":{"@type":"Person","name":"Nguyen Thanh Tin","alternateName":"VariantBug","url":"https://variantbug.com/"},"publisher":{"@type":"Person","name":"VariantBug","url":"https://variantbug.com/"},"mainEntityOfPage":"https://variantbug.com{{ page.url }}"}
 </script>
 </head>
 <body>
-<div class="wrap">  <h1>{{ page.title }}</h1>
+<div class="wrap">
+  <header class="top">
+    <a href="/" style="display:flex;align-items:center;gap:11px;text-decoration:none"><div class="dot">+</div><div class="brand">VariantBug<small>independent security research</small></div></a>
+    <div class="sp"></div>
+    <a class="nav" href="/how">How I work</a>
+  </header>
+  <h1>{{ page.title }}</h1>
   <div class="content">{{ content }}</div>
-  <footer><a href="/">← VariantBug</a></footer>
+  <footer>
+    <a href="/">&larr; VariantBug</a>
+    <span class="sp"></span>
+    <a href="/how">How I work</a>
+    <a href="https://github.com/variantbug">GitHub</a>
+    <a href="mailto:hello@variantbug.com">hello@variantbug.com</a>
+  </footer>
 </div>
 </body>
 </html>
