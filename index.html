@@ -58,10 +58,12 @@
 
   <div class="diff" aria-hidden="true">
     <div class="bar">patch · the hunt</div>
-    <pre><span class="hunk">@@ vendor fix, v3.35.0</span>
-<span class="del">- if (!owner) return redirect(applicant.home)</span>
-<span class="add">+ if (applicant.id != session.applicantId) abort(403)</span>
-<span class="hunk">@@ sibling route, /programs/:programName … <span class="add">unpatched</span></span></pre>
+    <pre><span class="hunk">── what the vendor fixed ──────────────────────</span>
+<span class="del">-  one report page forgot to check: does this
++  applicant really belong to you?</span>
+<span class="hunk">── what the hunt found ────────────────────────</span>
+<span class="add">+  a second page with the same missing check
++  — still unpatched</span></pre>
   </div>
 
   <p class="lede">When a vendor fixes one bug, the same root cause often survives elsewhere.
